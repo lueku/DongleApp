@@ -18,11 +18,16 @@ namespace DongleApp2._0
 
         public Form1()
         {
+            int screenLeft = SystemInformation.VirtualScreen.Left;
+            int screenTop = SystemInformation.VirtualScreen.Top;
+            int screenWidth = SystemInformation.VirtualScreen.Width;
+            int screenHeight = SystemInformation.VirtualScreen.Height;
+
             InitializeComponent();
             ShowInTaskbar = false;
             FormBorderStyle = FormBorderStyle.None;
             _overlay = new OverlayForm();
-            _overlay.Location = new Point(0, 0);
+            _overlay.Location = new Point(screenLeft, screenTop);
             _overlay.StartPosition = FormStartPosition.Manual;
             _overlay.Show();
         }
