@@ -22,6 +22,8 @@ namespace DongleApp2._0
             ShowInTaskbar = false;
             FormBorderStyle = FormBorderStyle.None;
             _overlay = new OverlayForm();
+            _overlay.Location = new Point(0, 0);
+            _overlay.StartPosition = FormStartPosition.Manual;
             _overlay.Show();
         }
     }
@@ -40,6 +42,7 @@ namespace DongleApp2._0
             FormBorderStyle = FormBorderStyle.None;
             BackColor = Color.Black;
 
+            Location = new Point(0, 0);
             Width = screenWidth;
             Height = screenHeight;
 
